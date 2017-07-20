@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BABC07BD-E6FD-4485-9FD8-6721DFE60B4B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MIAP.HttpCore</RootNamespace>
+    <AssemblyName>MIAP.HttpCore</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\MIAP.HttpCore.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSharpLib.Common">
+      <HintPath>..\..\CSharpLibrary\CSharpLib.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>..\..\CSharpLibrary\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Compiled.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="ContentType.cs" />
+    <Compile Include="DataContext.cs" />
+    <Compile Include="DataHttphandler.cs" />
+    <Compile Include="HttpMoudle.cs" />
+    <Compile Include="IContext.cs" />
+    <Compile Include="IExecute.cs" />
+    <Compile Include="ManageContext.cs" />
+    <Compile Include="PipeHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PushPipe.cs" />
+    <Compile Include="RespondCode.cs" />
+    <Compile Include="ServiceContext.cs" />
+    <Compile Include="SyncContext.cs" />
+    <Compile Include="SyncHttphandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MIAP.Cache\MIAP.Cache.csproj">
+      <Project>{8df50201-5d79-4a18-a46d-2a576c26065a}</Project>
+      <Name>MIAP.Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MIAP.Configuration\MIAP.Configuration.csproj">
+      <Project>{a59cc665-d259-4448-adb5-c3ae4727852d}</Project>
+      <Name>MIAP.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MIAP.Protobuf\MIAP.Protobuf.csproj">
+      <Project>{18dd9412-e45c-4e8b-82f8-0a3c60f23237}</Project>
+      <Name>MIAP.Protobuf</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

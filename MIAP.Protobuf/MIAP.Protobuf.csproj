@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{18DD9412-E45C-4E8B-82F8-0A3C60F23237}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MIAP.Protobuf</RootNamespace>
+    <AssemblyName>MIAP.Protobuf</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\MIAP.Protobuf.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="protobuf-net">
+      <HintPath>..\..\CSharpLibrary\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\RequestBase.cs" />
+    <Compile Include="Base\RespondBase.cs" />
+    <Compile Include="Base\Status.cs" />
+    <Compile Include="Bbs\BestReplyForm.cs" />
+    <Compile Include="Bbs\Forum.cs" />
+    <Compile Include="Bbs\ForumList.cs" />
+    <Compile Include="Bbs\ForumNewTopicCountList.cs" />
+    <Compile Include="Bbs\ForumType.cs" />
+    <Compile Include="Bbs\OrderType.cs" />
+    <Compile Include="Bbs\PostRole.cs" />
+    <Compile Include="Bbs\ReplyDetail.cs" />
+    <Compile Include="Bbs\ReplyForm.cs" />
+    <Compile Include="Bbs\ReplyList.cs" />
+    <Compile Include="Bbs\ReplyQuery.cs" />
+    <Compile Include="Bbs\TopicBasic.cs" />
+    <Compile Include="Bbs\TopicContent.cs" />
+    <Compile Include="Bbs\TopicDetail.cs" />
+    <Compile Include="Bbs\TopicForm.cs" />
+    <Compile Include="Bbs\TopicList.cs" />
+    <Compile Include="Bbs\TopicQuery.cs" />
+    <Compile Include="Bbs\TopicType.cs" />
+    <Compile Include="Common\BoolSingle.cs" />
+    <Compile Include="Common\KvPair.cs" />
+    <Compile Include="Common\KvPairList.cs" />
+    <Compile Include="Common\MediaDetail.cs" />
+    <Compile Include="Common\MediaType.cs" />
+    <Compile Include="Common\NetworkType.cs" />
+    <Compile Include="Common\ParentSubKv.cs" />
+    <Compile Include="Common\ParentSubKvExt.cs" />
+    <Compile Include="Common\ParentSubListKv.cs" />
+    <Compile Include="Common\StringList.cs" />
+    <Compile Include="Common\StringSingle.cs" />
+    <Compile Include="Common\Int32List.cs" />
+    <Compile Include="Extend\Advert.cs" />
+    <Compile Include="Extend\AdvertList.cs" />
+    <Compile Include="Extend\ApplyForm.cs" />
+    <Compile Include="Material\DictQuery.cs" />
+    <Compile Include="Material\DictResult.cs" />
+    <Compile Include="Material\DictResultBasic.cs" />
+    <Compile Include="Material\DictResultItem.cs" />
+    <Compile Include="Material\DictResultPackage.cs" />
+    <Compile Include="Material\DictResultPortion.cs" />
+    <Compile Include="Material\NewsBrief.cs" />
+    <Compile Include="Material\NewsList.cs" />
+    <Compile Include="Material\NewsQuery.cs" />
+    <Compile Include="Material\ResBasic.cs" />
+    <Compile Include="Material\ResInfoForMe.cs" />
+    <Compile Include="Material\ResInfoForMeList.cs" />
+    <Compile Include="Material\ResItem.cs" />
+    <Compile Include="Material\ResItemForMe.cs" />
+    <Compile Include="Material\ResItemForMeList.cs" />
+    <Compile Include="Material\ResItemList.cs" />
+    <Compile Include="Material\ResLevel.cs" />
+    <Compile Include="Material\ResList.cs" />
+    <Compile Include="Material\ResMode.cs" />
+    <Compile Include="Material\ResQuery.cs" />
+    <Compile Include="Material\ResRange.cs" />
+    <Compile Include="Material\ResSort.cs" />
+    <Compile Include="Material\Sentence.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="School\CourseInfo.cs" />
+    <Compile Include="School\CourseList.cs" />
+    <Compile Include="School\CourseQuery.cs" />
+    <Compile Include="School\CoursesOneDay.cs" />
+    <Compile Include="School\CourseTime.cs" />
+    <Compile Include="School\CustomerServiceList.cs" />
+    <Compile Include="School\SchoolInfo.cs" />
+    <Compile Include="School\TimeTableList.cs" />
+    <Compile Include="Social\ContactsList.cs" />
+    <Compile Include="Social\ContactsQuery.cs" />
+    <Compile Include="Social\GroupBase.cs" />
+    <Compile Include="Social\GroupForm.cs" />
+    <Compile Include="Social\GroupList.cs" />
+    <Compile Include="Social\GroupQuery.cs" />
+    <Compile Include="Support\AppVersion.cs" />
+    <Compile Include="Support\CmdServer.cs" />
+    <Compile Include="Support\Device.cs" />
+    <Compile Include="Support\InterestList.cs" />
+    <Compile Include="User\Account.cs" />
+    <Compile Include="User\AccountChannel.cs" />
+    <Compile Include="User\AppOptions.cs" />
+    <Compile Include="User\AuthResult.cs" />
+    <Compile Include="User\ExpLevel.cs" />
+    <Compile Include="User\Gender.cs" />
+    <Compile Include="User\PasswordForm.cs" />
+    <Compile Include="User\Personal.cs" />
+    <Compile Include="User\UserBase.cs" />
+    <Compile Include="User\UserExt.cs" />
+    <Compile Include="User\UserInSchool.cs" />
+    <Compile Include="User\UserRole.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

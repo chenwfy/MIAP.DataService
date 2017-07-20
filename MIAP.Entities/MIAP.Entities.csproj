@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{99E09AE5-F579-46C4-822D-24C45F738B63}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MIAP.Entities</RootNamespace>
+    <AssemblyName>MIAP.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\MIAP.Entities.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="protobuf-net">
+      <HintPath>..\..\CSharpLibrary\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bbs\ForumInfo.cs" />
+    <Compile Include="Bbs\PostInfo.cs" />
+    <Compile Include="Bbs\TopicInfo.cs" />
+    <Compile Include="Bbs\TopicQueryConditions.cs" />
+    <Compile Include="Extend\AdvertDetail.cs" />
+    <Compile Include="Extend\ApplyInfo.cs" />
+    <Compile Include="Logs\AdvertPvLog.cs" />
+    <Compile Include="Logs\CmdQueryLog.cs" />
+    <Compile Include="Logs\ILog.cs" />
+    <Compile Include="Logs\UserCoordLog.cs" />
+    <Compile Include="Logs\UserExpChangedLog.cs" />
+    <Compile Include="Logs\UserInfoUpdateLog.cs" />
+    <Compile Include="Logs\UserLoginLog.cs" />
+    <Compile Include="Logs\UserPagePvLog.cs" />
+    <Compile Include="Logs\UserPasswordChanagedLog.cs" />
+    <Compile Include="Logs\UserStatusChangedLog.cs" />
+    <Compile Include="Logs\UserVirtualCoinChangedLog.cs" />
+    <Compile Include="Material\DictRecord.cs" />
+    <Compile Include="Material\WsnContent.cs" />
+    <Compile Include="PageResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="School\CourseBase.cs" />
+    <Compile Include="School\LessonInfo.cs" />
+    <Compile Include="School\SchoolBase.cs" />
+    <Compile Include="Social\GroupCacheInfo.cs" />
+    <Compile Include="Social\GroupInfo.cs" />
+    <Compile Include="Social\GroupMember.cs" />
+    <Compile Include="Social\GroupWithSchool.cs" />
+    <Compile Include="Social\UserFollowed.cs" />
+    <Compile Include="Support\InterestTypeInfo.cs" />
+    <Compile Include="Support\InterestWordInfo.cs" />
+    <Compile Include="Support\UserDevice.cs" />
+    <Compile Include="Support\AppVersionInfo.cs" />
+    <Compile Include="User\UserAccess.cs" />
+    <Compile Include="User\UserAccount.cs" />
+    <Compile Include="User\UserCacheInfo.cs" />
+    <Compile Include="User\UserCheckedInLog.cs" />
+    <Compile Include="User\UserCoords.cs" />
+    <Compile Include="User\UserExtInfo.cs" />
+    <Compile Include="User\UserFollowers.cs" />
+    <Compile Include="User\UserInfo.cs" />
+    <Compile Include="User\UserOptions.cs" />
+    <Compile Include="User\UserVaildInfo.cs" />
+    <Compile Include="User\UserWithSchool.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MIAP.Protobuf\MIAP.Protobuf.csproj">
+      <Project>{18dd9412-e45c-4e8b-82f8-0a3c60f23237}</Project>
+      <Name>MIAP.Protobuf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MIAP.Utility\MIAP.Utility.csproj">
+      <Project>{7ea8def8-af28-41da-82ea-0c5f60b0593e}</Project>
+      <Name>MIAP.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
